@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=McLaren&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.li-header {
+    transition: .3s all ease-in-out;
+}
+
+.li-header:hover {
+    color: #2a5577;
+    scale: 101%;
+}
+
+@keyframes calm-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+.bouncing-element {
+    position: relative;
+    animation: calm-bounce 1.2s infinite;
+    animation-timing-function: ease-in-out;
+}
