@@ -14,9 +14,7 @@
             top: 0;
             animation: slideDown 0.5s ease-in-out forwards;
             backdrop-filter: blur(8px);
-            /* Aplica el blur al fondo */
             background-color: rgba(255, 255, 255, 0.8);
-            /* Ajusta la opacidad del fondo */
         }
 
         @keyframes slideDown {
@@ -26,6 +24,41 @@
 
             100% {
                 transform: translateY(0);
+            }
+        }
+
+        .kite {
+            position: absolute;
+            background: url(assets/anim-icon-1.png);
+            width: 210px;
+            height: 275px;
+            left: 0;
+            bottom: 300px;
+            background-repeat: no-repeat;
+            animation: flying 5s ease-in-out infinite;
+        }
+
+        @keyframes flying {
+
+            0%,
+            100% {
+                top: 0%;
+                left: 0%;
+            }
+
+            25% {
+                top: -6%;
+                left: 5%;
+            }
+
+            50% {
+                top: -8%;
+                left: 3%;
+            }
+
+            75% {
+                top: -5%;
+                left: 5%;
             }
         }
     </style>
@@ -42,7 +75,8 @@
                 </div>
                 <ul class="flex text-black text-lg uppercase items-center gap-x-24">
                     <li class="li-header"><a href="#inicio" rel="noopenner">Inicio</a></li>
-                    <li class="li-header"><a href="inscripciones.html" class="cursor-pointer" rel="noopenner">Inscripciones</a></li>
+                    <li class="li-header"><a href="inscripciones.html" class="cursor-pointer"
+                            rel="noopenner">Inscripciones</a></li>
                     <li class="li-header"><a href="#nuestra-historia" rel="noopenner">Nuestra historia</a></li>
                 </ul>
             </div>
@@ -73,15 +107,16 @@
                     <p id="equis" onClick="onEquis()" class="text-5xl cursor-pointer">&Cross;</p>
                 </div>
                 <li><a href="#inicio" onClick="onEquis()" class="italic">INICIO</a></li>
-                <li><a href="inscripciones.html" class="cursor-pointer" onClick="onEquis()" class="italic">INSCRIPCIONES</a></li>
+                <li><a href="inscripciones.html" class="cursor-pointer" onClick="onEquis()"
+                        class="italic">INSCRIPCIONES</a></li>
                 <li><a href="#nuestra-historia" onClick="onEquis()" class="italic">NUESTRA HISTORIA</a></li>
             </ul>
         </div>
     </header>
 
-    <main class="w-full mt-[10px] lg:mt-[50px]">
+    <main class="w-full mt-[10px] lg:mt-[50px] relative">
         <!-- HOME -->
-        <section class="w-full h-full flex flex-col items-center justify-center" id="inicio">
+        <section class="w-full h-full flex flex-col items-center justify-center relative" id="inicio">
             <article
                 class="mx-auto max-w-7xl w-full h-auto flex flex-col items-center px-4 xl:px-0 lg:flex-row lg:justify-between">
                 <div class="flex flex-col items-center justify-center w-full my-8 lg:items-start">
@@ -147,7 +182,8 @@
                     <button
                         class="bg-[#2e3853] text-white font-light mt-8 py-3 px-6 rounded-2xl text-lg flex items-center lg:hidden bouncing-element">
                         INSCRIPCIONES
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"
+                            class="ml-2">
                             <path fill="#ffffff"
                                 d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4" />
                         </svg>
@@ -157,10 +193,13 @@
         </section>
 
         <!-- ABOUT NOSOTROS -->
-        <section class="w-full h-full flex flex-col items-center justify-center my-20 lg:my-[120px]"
+        <section class="w-full h-full flex flex-col items-center justify-center my-20 lg:my-[120px] relative"
             id="nuestra-historia">
             <article
                 class="mx-auto max-w-7xl w-full h-auto flex flex-col items-center px-4 xl:px-0 lg:flex-row-reverse lg:justify-between">
+                <div class="kite z-50 hidden 2xl:block">
+                    <div class="tail"></div>
+                </div>
                 <div class="flex items-start w-full flex-col max-w-[650px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="60" height="16" viewBox="0 0 60 16">
                         <path class="#000" fill="#000" stroke="" stroke-width="2"
@@ -170,8 +209,8 @@
                     <h2 class="text-lg font-light mt-3">Nuestra historia</h2>
                     <p class="text-3xl">25 Años de experiencia</p>
                     <p class="text-3xl font-bold uppercase italic text-[#2e3853] flex items-center">
-                        Sembrando fe y educación
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48" class="ml-2">
+                        <svg xmlns="http://www.w3.org/20    00/svg" width="50" height="50" viewBox="0 0 48 48"
+                            class="mr-2">
                             <g fill="none" stroke="#2e3853" stroke-width="4">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="m20 33l6 2s15-3 17-3s2 2 0 4s-9 8-15 8s-10-3-14-3H4" />
@@ -182,6 +221,7 @@
                                 <circle cx="34" cy="7" r="3" />
                             </g>
                         </svg>
+                        Sembrando fe y educación
                     </p>
                     <p class="text-xl my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
                         quibusdam.</p>
@@ -226,14 +266,15 @@
                     </svg>
                     <p class="font-light text-xl mt-4">Establecimiento y alumnos</p>
                     <h2 class="font-mclaren font-bold text-4xl flex items-center mb-2 text-[#2e3853]">
-                        Galería de imágenes
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 20 20" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 20 20" class="mr-2">
                             <path fill="#2e3853"
                                 d="M17.125 6.17L15.079.535c-.151-.416-.595-.637-.989-.492L.492 5.006c-.394.144-.593.597-.441 1.013l2.156 5.941V8.777c0-1.438 1.148-2.607 2.56-2.607H8.36l4.285-3.008l2.479 3.008zM19.238 8H4.767a.76.76 0 0 0-.762.777v9.42c.001.444.343.803.762.803h14.471c.42 0 .762-.359.762-.803v-9.42A.76.76 0 0 0 19.238 8M18 17H6v-2l1.984-4.018l2.768 3.436l2.598-2.662l3.338-1.205L18 14z" />
                         </svg>
+                        Galería de imágenes
                     </h2>
                 </div>
-                <div class="grid grid-cols-1 grid-rows-1 sm:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 gap-y-6 gap-x-8 z-10 justify-between place-content-between">
+                <div
+                    class="grid grid-cols-1 grid-rows-1 sm:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 gap-y-6 gap-x-8 z-10 justify-between place-content-between">
                     <a class="z-10">
                         <img class="rounded-lg w-96 h-56 object-cover z-[10001]" src="assets/foto-5to-uner.webp"
                             alt="fotos de la casa" onclick="openModal(this.src)">
@@ -279,7 +320,8 @@
                     <button
                         class="bg-white text-purple-600 py-3 px-6 rounded-2xl text-xl items-center flex hover:scale-[105%] transition-all bouncing-element">
                         INSCRIPCIONES
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"
+                            class="ml-2">
                             <path fill="rgb(147 51 234)"
                                 d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4" />
                         </svg>
@@ -289,7 +331,7 @@
         </section>
 
         <!-- GOOGLEMAPS -->
-        <section class="flex flex-col items-start justify-center w-full h-full my-[120px] max-w-[1240px] mx-auto">
+        <section class="flex flex-col items-start justify-center w-full h-full my-[120px] max-w-[1240px] mx-auto relative">
             <div class="mb-6 px-4 xl:px-0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="16" viewBox="0 0 60 16">
                     <path class="#000" fill="#000" stroke="" stroke-width="2"
@@ -298,22 +340,21 @@
                 </svg>
                 <p class="font-light text-xl mt-4">Donde nos encontramos</p>
                 <h2 class="font-mclaren font-bold text-4xl flex items-center mb-2 text-[#2e3853]">
-                    Ubicación
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 256 256">
                         <path fill="#2e3853"
                             d="M124 175a8 8 0 0 0 7.94 0c2.45-1.41 60-35 60-94.95A64 64 0 0 0 64 80c0 60 57.58 93.54 60 95m4-119a24 24 0 1 1-24 24a24 24 0 0 1 24-24m112 128c0 31.18-57.71 48-112 48S16 215.18 16 184c0-14.59 13.22-27.51 37.23-36.37a8 8 0 0 1 5.54 15C42.26 168.74 32 176.92 32 184c0 13.36 36.52 32 96 32s96-18.64 96-32c0-7.08-10.26-15.26-26.77-21.36a8 8 0 0 1 5.54-15C226.78 156.49 240 169.41 240 184" />
                     </svg>
+                    Ubicación
                 </h2>
             </div>
             <article class="w-full h-full flex items-center justify-center border-[15px]">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841.3327095816278!2d-58.25174623037302!3d-32.490585567166725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95afdb00f6630b2b%3A0x510224f931f0dcf9!2sEscuela%20Maria%20Auxiliadora%20N%C2%B0108!5e0!3m2!1ses!2sar!4v1727663386108!5m2!1ses!2sar"
-                    class="w-full aspect-video border-0 max-h-[400px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                    allowfullscreen="">
+                    class="w-full aspect-video border-0 max-h-[400px]" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen="">
                 </iframe>
             </article>
         </section>
-        
 
         <!-- MODAL -->
         <div id="photoModal" class="fixed inset-0 bg-black bg-opacity-75 items-center justify-center hidden z-[11000]">
@@ -370,7 +411,8 @@
                     <button
                         class="bg-white text-indigo-950 py-3 px-6 rounded-2xl text-xl items-center flex hover:scale-[105%] transition-all bouncing-element">
                         INSCRIPCIONES
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"
+                            class="ml-2">
                             <path fill="rgb(30 27 75)"
                                 d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4" />
                         </svg>
@@ -444,6 +486,7 @@
             modal.classList.remove('flex');
         }
     </script>
+
 </body>
 
 </html>
