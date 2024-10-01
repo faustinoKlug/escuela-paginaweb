@@ -651,11 +651,6 @@ video {
   margin-bottom: 120px;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -766,6 +761,10 @@ video {
 
 .h-full{
   height: 100%;
+}
+
+.max-h-\[400px\]{
+  max-height: 400px;
 }
 
 .max-h-screen{
@@ -1279,16 +1278,6 @@ video {
     padding-right: 1rem;
   }
 
-  .md\:px-8{
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .md\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1366,11 +1355,6 @@ video {
 
   .lg\:justify-between{
     justify-content: space-between;
-  }
-
-  .lg\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .lg\:text-left{
